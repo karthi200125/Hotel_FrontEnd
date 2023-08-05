@@ -1,0 +1,57 @@
+.footer{
+    width: 100%;
+    font-size: 15px;
+    padding-left: 50px;
+    padding-right: 50px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;    
+}
+.flists{        
+    display: flex;    
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+.flist{
+    list-style: none;            
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.flistitem{
+    margin-bottom: 10px;
+    color: #003580;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+.flistitem:hover{
+    color: red;
+}
+.ftitle{
+    font-size: 25px;
+    color: black;
+    font-weight: 600;
+}
+.fcon{
+    display: flex;
+    flex-direction: row;    
+    justify-content: space-between;
+    width: 80%;
+}
+@media screen and (max-width: 648px) {
+.fcon{
+    display: flex;
+    flex-flow: wrap row;    
+    width: 300px;
+}
+.flist{
+    width: 110px;    
+    margin-top: 10px;
+}
+}

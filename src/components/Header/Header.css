@@ -1,0 +1,179 @@
+.header{
+    background-color: #003580;
+    color: white;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    position: relative;
+}
+.headercontainer{
+    width: 100%;  
+    margin: 20px 0px 100px 0px;  
+}
+.headercontainer.listmode{
+    margin: 20px 0px 0px 0px;  
+}
+.headerlist{
+    display: flex;
+    gap: 80px;
+    margin-bottom: 20px;
+}
+.headerlistItem{
+    display: flex;
+    align-items: center;    
+    gap: 10px;
+}
+.headerlistItem.active{
+    border: 1px solid white;
+    padding: 10px;
+    border-radius: 20px;
+    cursor: pointer;    
+}
+
+.headerlistItem.active1{
+    border: 1px solid transparent;
+    padding: 10px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.headerlistItem.active1:hover{
+    border: 1px solid white;        
+}
+.headerdesc{
+    margin: 20px 0px;
+}
+.headerbtn{
+    padding: 10px;
+    background-color: #0071c2;
+    color: white;
+    border: 2px solid transparent;
+    cursor: pointer;
+    border-radius: 10px;
+
+}
+.headerbtn:hover{
+    border: 2px solid #003580;
+    color: #003580;
+    background-color: transparent;
+}
+.headersearch{
+    height: 70px;
+    background-color: white;
+    border: 5px solid rgb(231, 231, 25);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;    
+    padding: 20px 0px ;
+    border-radius: 5px;
+    position: absolute;
+    bottom: -25px;
+    width: 98%;
+    cursor: pointer;
+}
+.headericon{
+    color: black;
+    font-size: 20px;
+}
+.headersearchitem{
+    display: flex;
+    align-items: center;
+    gap: 10px;    
+}
+.headersearchitem:hover{
+    color: red;
+}
+.headersearchinput{
+    border: none;
+    outline: none;
+    padding: 15px;    
+    width: 450px;
+    text-transform: capitalize;
+}
+.headersearchtext{
+    color: rgba(0, 0, 0, 0.445);
+    font-weight: 600;
+    font-size: 15px;
+}
+.date{
+    position: absolute;
+    top: 50px;
+    align-items: none;
+    z-index: 2;
+}
+.options{
+    z-index: 2;
+    position: absolute;
+    top: 50px;
+    background-color: white;
+    color: gray;
+    border-radius: 5px;
+    box-shadow: (10px 10px 10px black);
+}
+.optionitem{
+    width: 200px ;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px;
+}
+.optioncounter{
+display: flex;
+align-items: center;
+gap: 10px;
+font-size: 15px;
+color: black;
+}
+.optioncounterbutton{
+    width: 30px;
+    height: 30px;
+    border: 1px solid blue;
+    color: black;
+    cursor: pointer;
+    background-color: white;
+    border-radius: 10px;
+}
+.optioncounterbutton:disabled{
+    cursor: not-allowed;    
+}
+.hide{
+    display: none;
+}
+
+@media screen and (max-width: 648px) {
+ 
+ .headerlistItem{
+    width: 30px;
+    margin-right: -12px;
+ }
+ .headersearch{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    height: 250px;
+    width: 370px;    
+    justify-content: start;
+    align-items: center;
+ }
+ .date{
+    margin-left: -70px;
+    margin-top: 80px;
+    border: 1px solid gray;
+ }
+ .options{
+    margin-left: -22px;
+    margin-top: 40px;    
+    border: 1px solid gray;
+ }
+ .headersearchinput{
+    width: 250px;
+  border:1px solid black ;
+ }
+ .headcon{
+    display: flex;
+    flex-direction: column;
+ } 
+ .hide{
+    color: black;
+    display: block;
+ }
+}

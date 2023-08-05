@@ -1,0 +1,111 @@
+.listcontainer{
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}
+.listwrapper{
+    width: 100%;
+    display: flex;
+    gap: 20px;
+}
+.listsearch{
+    flex: 1;
+    background-color: #febb02;
+    padding: 10px;
+    border-radius: 10px;
+    position: sticky;
+    top: 90px;
+    height: max-content;
+}
+.listsearchtitle{
+    font-size: 30px;
+    color:black;
+    font-weight: 600;
+    margin-bottom: 10px;    
+}
+
+.lsitem{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-bottom: 10px;
+}
+.lsitem>label{
+    font-size: 20px;    
+}
+
+.opt{
+    font-size: 25px;
+    font-weight: 600;
+    color: black;
+}
+.lsitem>input{
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    height: 30px;
+}
+.lsitem>span{    
+    padding: 10px;
+    border-radius: 5px;
+    height: 30px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.lsoptionitem{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+    color: rgba(0, 0, 0, 0.5);    
+    font-size: 20px;    
+}
+.lsoptioninput{
+    padding: 10px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    width: 80px;
+}
+.options{
+    padding: 10px;    
+}
+.listsearch>button{
+    padding: 10px;
+    border: none;
+    background-color: #0071c2;
+    color: white;
+    font-weight: 600;
+    width: 100%;
+    cursor: pointer;
+    border-radius: 5px;
+    
+}
+.listsearch>button:hover{
+    background-color: black;
+    color: white;
+
+}
+
+
+.listresult{
+    flex: 3;
+    }
+
+@media screen and (max-width:648px){
+    .listwrapper{
+        display: flex;
+        flex-direction: column;        
+    }
+    .lsitem label{
+        display: none;        
+    }
+    .lsitem .desiti{
+        display: none;
+    }
+    .listsearch {
+        position: relative;
+    }
+    
+}

@@ -1,0 +1,159 @@
+
+.login {
+  width: 100%;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  background: linear-gradient(rgba(0, 0, 0, 0.722), rgba(0, 0, 0, 0.1)), url(../../assets/bg.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+.inputcon{
+    display: flex;
+    flex-direction: row;    
+    align-items: center;
+    width: 400px;
+   justify-content: space-between; 
+   color: white;
+  border-bottom: 2px solid;
+}
+.inputcon .ic{
+    font-size: 30px;
+    cursor: pointer;
+}
+.login .box {
+  width: 40%;
+  height: 70vh;
+  padding: 10px;
+  border-radius: 20px;
+  background: rgba(238, 221, 221, 0.131);
+}
+
+.login .box.mobile {
+  width: 80%;
+}
+
+.login .box .logo {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px;
+}
+
+.login .box .logo img {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  color: white;
+  filter: brightness(100);
+}
+
+.login .box .logo h1 {
+  background: linear-gradient(to right, #1fa2ff, #12d8fa, #a6ffcb);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.login .box .form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+.login .box .form input {
+  padding: 15px;
+  width: 100%;
+  background: transparent;
+  border: none;  
+  font-size: 15px;    
+}
+.linput{
+    color: white;
+}
+
+.login .box .form input::placeholder {
+  color: rgba(255, 255, 255, 0.477);
+}
+
+.login .box .form input:focus {
+  outline: none;
+}
+
+.login .box .form .btn {
+  gap: 10px;
+  display: flex;
+  width: 70%;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  color: white;
+  border: 3px solid rgb(242, 112, 156);
+  font-weight: 600;
+  margin-bottom: 15px;
+  cursor: pointer;
+}
+
+.login .box .form .btn .icon-btn {
+  font-size: 35px;
+  display: none;
+}
+
+.login .box .form .btn button {
+  padding: 15px;
+  border: none;
+  background-color: transparent;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  color: white;
+}
+
+.login .box .form .btn:hover {
+  background-image: linear-gradient(to right, rgb(242, 112, 156), rgb(255, 148, 114));
+  transition: 0.6s;
+  color: white;
+  border: 3px solid rgb(242, 112, 156);
+}
+
+.login .box .form .btn:hover .icon-btn {
+  display: block;
+}
+
+.login .box .form .btn:hover button {
+  color: white;
+}
+
+.login .bottom {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  font-size: 20px;
+  color: white;
+}
+
+.login .bottom .link {
+  text-decoration: none;
+  list-style: none;
+  background: linear-gradient(to right, #1fa2ff, #12d8fa, #a6ffcb);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+@media screen and (max-width: 648px) {
+  .inputcon{
+    width: 300px;
+  }
+  .login .box .form .btn {
+    width: 300px;
+  }
+  .login .bottom{
+    width: 300px;    
+  }
+  .login .box{
+    width: 350px;
+  }
+
+}

@@ -1,0 +1,35 @@
+.plist{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;    
+}
+.plistitem{
+    flex: 1;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    width: 240px;
+}
+.plist img{
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+.plisttitle>h1{
+    font-size: 20px;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+.plisttitle>h2{
+    font-size: 20px;
+    font-weight: 600;
+    opacity: 0.3;
+}
+@media screen and (max-width: 648px) {
+ .plist{
+    display: flex;
+    flex-direction: column;
+ } 
+}
