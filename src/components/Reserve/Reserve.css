@@ -1,8 +1,8 @@
 .reserve{
     width: 100vw;
-    height: 100vh;    
+    height: 80vh;    
     position: fixed;
-    top: 0;
+    top: 70px;
     left: 0;
     display: flex;
     align-items: center;
@@ -15,34 +15,35 @@
     padding: 20px;
     position: relative;
     font-size: 20px;       
-    width: 550px;
-    height: 630px;
+    width: 500px;
+    height: 580px;
     overflow: scroll;    
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    
+    gap: 10px;    
+    margin-top: 80px;    
 }
 
 .ricon{
     position: fixed;
     top: 6%;
-    right: 32%;
+    right: 29.5%;
     cursor: pointer; 
-    margin-top: 10px;
-    margin-right: 10px;                    
+    margin-top: 48px;
+    margin-right: 50px;                    
+    z-index: 1;    
 }
 .ricon:hover{
     color: red;
 }
 .ritem{
     display: flex;
-    align-items: center;
-    gap: 50px;
-    padding: 20px;            
-    height: 130px;
+    align-items: center;    
+    padding: 10px;            
+    height: max-content;
     justify-content: space-between;
-    border: 1px solid gray;    
+    border: 1px solid gray;            
+    margin-top: 30px;
 }
 .riteminfo{
     display: flex;
@@ -60,10 +61,10 @@
     cursor: pointer;
     width: 150px;
     text-align: center; 
-    width: 33%;
+    width: 32.8%;
     position: fixed;
-    bottom: 0;
-    margin-bottom: 45px;
+    bottom: 0; 
+    margin-bottom: 5px;   
 }
 .rbtn:hover{
     background-color: black;
@@ -73,6 +74,13 @@
     font-weight: 600;
     font-size: 25px;
     text-align: center;
+    background-color: white;
+    padding: 10px;
+    width: 450px;    
+    position: fixed;
+    border-bottom: 1px solid black;
+    top: 11%;
+
 }
 .rtitle{
     color: #0071c2;
@@ -134,14 +142,55 @@
     transform: scale(1.1);
     transition: 0.6s ;
 }
+.sd{
+    font-size: 27px;
+    color: red;
+    margin-top: 50px;
+    margin-left: 50px;
+}
+.selected-rooms{    
+    width: 100%;
+    min-height: 100vh;    
+    overflow: scroll;
+    height: max-content;        
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    overflow: scroll;
+    align-items: center;    
+    background-color: white;
+    position: fixed;
+    top: 10%;
+    left: 0;
+    padding: 20px;
+}
+.selected-room{
+    padding: 10px;
+    border: 1px solid gray;
+    width: 300px;
+}
+.checkout-now-btn{
+    margin-left: -230px;
+    margin-bottom: 50px;
+    
+}
 @media screen and (max-width:648px){
+     .reserve{        
+        width: 100%;
+        height: 100vh;
+      }
+      .checkout-now-btn{
+        right: 20px;
+      }
     .ricon{
         margin-right: -100px;
         margin-top: 45px;
-        font-size: 25px;
+        font-size: 25px;        
     }
     .rcon{
-        width: 370px;
+        width: 100%;        
+        height: 91vh;
+        top: -3%;
     }
     .ritem{
         height: 170px;
@@ -154,11 +203,15 @@
         flex-direction: row;
     }
     .rbtn{
-        width: 95%;
-        margin-bottom: 80px;
-        margin-left: -21px;
+        width: 90%;
+        margin-bottom:10px;        
     }
-    .load span{
-        margin-left: 80px;
+    .load span{        
+        font-size: 33px;
+    }
+    .rrtitle{
+        top: 10%;
+        left: -12%;
+        
     }
 }

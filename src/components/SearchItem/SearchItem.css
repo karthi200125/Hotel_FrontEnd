@@ -25,6 +25,9 @@
 }
 .sidistance{
     font-size: 15px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
 }
 .sitaxiop{
 font-size: 15px;
@@ -40,6 +43,13 @@ border-radius: 5px;
 }
 .sifeatures{
     font-size: 15px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+.sifeatures p{
+    border: 1px solid gray;
+    padding: 3px;
 }
 .sicancelop{
     font-size: 15px;
@@ -113,6 +123,7 @@ font-weight: bold;
     .searchitem{
         display: flex;
         flex-direction: column;
+        margin-top: 80px;
     }
     .sidetails{
         display: flex;

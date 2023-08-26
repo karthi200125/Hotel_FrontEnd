@@ -102,10 +102,12 @@
         display: none;        
     }
     .lsitem .desiti{
-        display: none;
+        
     }
     .listsearch {
         position: relative;
     }
-    
+    .listcontainer{
+        margin-top: -50px;
+    }
 }

@@ -47,6 +47,7 @@ const Hotel = () => {
       navigate('/login');
     }
   };
+  
 
   return (
     <div>
@@ -96,13 +97,13 @@ const Hotel = () => {
                 <p className="hoteldesc">{data.desc}</p>
               </div>
               <div className="hotldetailprice">
-                <h1>perfect for a {days}-night stay</h1>
+                <h1>perfect for a {days > 0 ? days :"0" }-night stay</h1>
                 <span>
                   Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nobis laborum praesentium consequuntur sequi, nam
                   laboriosam.
                 </span>
                 <h2>
-                  <b>₹{days * data.cheapestPrice * options.room}</b> ({days} Days)
+                  <b>₹{days > 0 ? days * data.cheapestPrice * options.room : "0"}</b> ({days > 0 ? days :"0"} Days)
                 </h2>
                 <button onClick={handleclick}>Reserve Book</button>
               </div>

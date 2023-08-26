@@ -12,7 +12,7 @@ const FeaturedProperties = () => {
   };
 
   return (
-    <div className='fp'>
+    <div className='fp'>      
       {loading ? (
         'Loading'
       ) : (

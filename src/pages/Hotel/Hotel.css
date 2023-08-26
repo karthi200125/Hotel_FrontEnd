@@ -16,7 +16,7 @@ position: relative;
     width: 33%;        
 }
 .hotelimg{
-    width: 480px;    
+    width: 433px;    
     object-fit: cover;
     height: 300px;
     cursor: pointer;    
@@ -116,7 +116,7 @@ position: relative;
     margin-top: 20px;
 }
 .slider{
-    position: sticky;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;    
@@ -131,7 +131,7 @@ position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.856);
 }
 .sliderimg{
     width: 90%;
@@ -142,13 +142,15 @@ position: relative;
     top: 0;
     right: 0;
     font-size: 30px;
-    cursor: pointer; 
-    color: #0071c2;
+    cursor: pointer;     
+    color: black;
+    background-color: red;
+    border-radius: 50%;
     margin-top: 15px;
     margin-right: 40px;
 }
 .close:hover{
-    color: red;
+    color: white;
 }
 .arrow{
     font-size: 30px;
@@ -192,17 +194,22 @@ position: relative;
     }
     .slider{
         width: 100%;
-        height: 450px;
+        height: 100vh;        
     }
     .sliderimg{
-        width: 90%;
-        height: 350px;
+        width: 100%;
+        height: 70vh;
     }
     .close{
         margin-right: 8px;
     }
     .left-arrow{
-        margin-left: -1px;
+        margin-left: 10px;
+        bottom: 10%;
+    }
+    .right-arrow{
+        margin-left: 10px;
+        bottom: 10%;
     }
 }
 

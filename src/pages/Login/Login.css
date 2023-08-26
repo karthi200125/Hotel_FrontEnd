@@ -25,7 +25,7 @@
 }
 .login .box {
   width: 40%;
-  height: 70vh;
+  height: 73vh;
   padding: 10px;
   border-radius: 20px;
   background: rgba(238, 221, 221, 0.131);
@@ -55,6 +55,7 @@
   background: linear-gradient(to right, #1fa2ff, #12d8fa, #a6ffcb);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  font-size: 50px;
 }
 
 .login .box .form {
