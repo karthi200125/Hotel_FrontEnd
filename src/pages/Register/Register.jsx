@@ -13,7 +13,7 @@ const Register = () => {
     email: undefined,
     password: undefined,
   });
-
+  const [isLoading, setIsLoading] = useState(false);
   const [showPassword, setShowPassword] = useState(false); 
 
   const { user, loading, error, dispatch } = useContext(AuthContext);
@@ -26,6 +26,10 @@ const Register = () => {
 
   const handleClick = async (e) => {
     e.preventDefault();
+    if(isLoading){
+      return;
+    }
+    setIsLoading(true)
     dispatch({ type: "LOGIN_START" });
     try {
       const response = await axios.post('https://hotel-booking-bsz4.onrender.com/api/auth/register', credentials);
@@ -33,6 +37,8 @@ const Register = () => {
       navigate("/");
     } catch (error) {
       dispatch({ type: "LOGIN_FAILURE", payload: error.response.data });
+    }finally{
+      setIsLoading(false)
     }
   };
 
@@ -49,24 +55,24 @@ const Register = () => {
         </div>
         <form className='form'>
           <div className="inputcon">
-            <input type="text" className="linput" placeholder='Username' id='username' onChange={handleChange} />
+            <input type="text" className="linput" placeholder='Username' id='username' onChange={handleChange} required/>
             <AiOutlineLock className='ic' />
           </div>
           <div className="inputcon">
-            <input type="email" className="linput" placeholder='Email' id='email' onChange={handleChange} />
+            <input type="email" className="linput" placeholder='Email' id='email' onChange={handleChange} required/>
             <MdEmail className='ic' />
           </div>
           <div className="inputcon">
-            <input type={showPassword ? 'text' : 'password'} className="linput" placeholder='Password' id='password' onChange={handleChange} />
+            <input type={showPassword ? 'text' : 'password'} className="linput" placeholder='Password' id='password' onChange={handleChange} required/>
             {showPassword ? (
               <AiOutlineEyeInvisible className='ic' onClick={togglePasswordVisibility} />
             ) : (
               <AiOutlineEye className='ic' onClick={togglePasswordVisibility} />
             )}
           </div>
-          {error && <span style={{color:'red'}}>{error.message}</span>}
+          {/* {error && <span style={{color:'red'}}>{error.message}</span>} */}
           <div className='btn' onClick={handleClick}>
-            <button type="submit">Register</button>
+            <button type="submit">{isLoading ?  "Please wait ..." : "Register"}</button>
           </div>
         </form>
         <div className='bottom'>

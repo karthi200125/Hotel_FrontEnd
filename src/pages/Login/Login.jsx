@@ -58,11 +58,11 @@ const Login = () => {
         </div>
         <form className='form'>
           <div className="inputcon">
-            <input type="text" className="linput" placeholder='Username' id='username' onChange={handleChange} />
+            <input type="text" className="linput" placeholder='Username' id='username' onChange={handleChange} required/>
             <AiOutlineLock className='ic' />
           </div>
           <div className="inputcon">
-            <input type={showPassword ? 'text' : 'password'} className="linput" placeholder='password' id='password' onChange={handleChange} />
+            <input type={showPassword ? 'text' : 'password'} className="linput" placeholder='password' id='password' onChange={handleChange} required/>
             {showPassword ? (
               <AiOutlineEyeInvisible className='ic' onClick={togglePasswordVisibility} />
             ) : (
