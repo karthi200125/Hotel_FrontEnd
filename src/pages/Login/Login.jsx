@@ -7,12 +7,13 @@ import logo from '../../assets/crown.png';
 import { AiOutlineLock, AiOutlineEye, AiOutlineEyeInvisible } from 'react-icons/ai';
 
 const Login = () => {
+  const [isLoading, setIsLoading] = useState(false);
   const [credentials, setCredentials] = useState({
     username: undefined,
     password: undefined,
   });
 
-  const [showPassword, setShowPassword] = useState(false); // State to track password visibility
+  const [showPassword, setShowPassword] = useState(false); 
 
   const { user, loading, error, dispatch } = useContext(AuthContext);
 
@@ -24,15 +25,25 @@ const Login = () => {
 
   const handleClick = async (e) => {
     e.preventDefault();
+    
+    if (isLoading) {
+      return; 
+    }
+  
     dispatch({ type: "LOGIN_START" });
+    setIsLoading(true);
+  
     try {
       const response = await axios.post('https://hotel-booking-bsz4.onrender.com/api/auth/login', credentials);
       dispatch({ type: "LOGIN_SUCCESS", payload: response.data });
-      navigate("/home")
+      navigate("/home");
     } catch (error) {
       dispatch({ type: "LOGIN_FAILURE", payload: error.response.data });
+    } finally {
+      setIsLoading(false); 
     }
   };
+  
 
   const togglePasswordVisibility = () => {
     setShowPassword((prev) => !prev);
@@ -60,7 +71,7 @@ const Login = () => {
           </div>
           {error && <p style={{ color: 'red' }}>{error.message}</p>}
           <div className='btn' onClick={handleClick}>
-            <button type="submit">Login</button>
+          <button type="submit" disabled={isLoading}>{isLoading ? "Please wait ..." : " Login"}</button>
           </div>
         </form>
         <div className='bottom'>

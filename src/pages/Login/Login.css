@@ -5,7 +5,7 @@
   align-items: center;
   justify-content: center;
   display: flex;
-  background: linear-gradient(rgba(0, 0, 0, 0.722), rgba(0, 0, 0, 0.1)), url(../../assets/bg.jpg) no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0.922), rgba(0, 0, 0, 0.5)), url(../../assets/bg-3.jpg) no-repeat;
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -28,7 +28,7 @@
   height: 73vh;
   padding: 10px;
   border-radius: 20px;
-  background: rgba(238, 221, 221, 0.131);
+  background: rgba(238, 221, 221, 0.141);
 }
 
 .login .box.mobile {
@@ -77,7 +77,8 @@
 }
 
 .login .box .form input::placeholder {
-  color: rgba(255, 255, 255, 0.477);
+  
+  color: rgba(255, 255, 255, 0.667);
 }
 
 .login .box .form input:focus {
@@ -139,6 +140,7 @@
 .login .bottom .link {
   text-decoration: none;
   list-style: none;
+  font-weight: 600;
   background: linear-gradient(to right, #1fa2ff, #12d8fa, #a6ffcb);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
