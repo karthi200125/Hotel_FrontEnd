@@ -1,5 +1,5 @@
 import React from 'react';
-import './Featuredproperties.css';
+import './FeaturedProperties.css';
 import useFetch from '../../hooks/usefetch';
 import { Link, useNavigate } from 'react-router-dom';
 
